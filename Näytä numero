@@ -1,0 +1,211 @@
+#define LEDa 5
+#define LEDb 4
+#define LEDc 9
+#define LEDd 10
+#define LEDe 11
+#define LEDf 6
+#define LEDg 7
+#define LEDdb 8
+
+#define LEDON LOW
+#define LEDOFF HIGH
+
+void setup()
+{
+  pinMode(LEDa, OUTPUT);
+   digitalWrite(LEDa, LEDOFF);
+  
+  pinMode(LEDb, OUTPUT);
+   digitalWrite(LEDb, LEDOFF);
+  
+  pinMode(LEDc, OUTPUT);
+   digitalWrite(LEDc, LEDOFF);
+  
+  pinMode(LEDd, OUTPUT);
+   digitalWrite(LEDd, LEDOFF);
+  
+  pinMode(LEDe, OUTPUT);
+   digitalWrite(LEDe, LEDOFF);
+  
+  pinMode(LEDf, OUTPUT);
+   digitalWrite(LEDf, LEDOFF);
+  
+  pinMode(LEDg, OUTPUT);
+   digitalWrite(LEDg, LEDOFF);
+  
+  pinMode(LEDdb, OUTPUT);
+   digitalWrite(LEDdb, LEDOFF);
+  
+  Serial.begin(9600);
+}
+
+int viive = 1000;
+
+void zero()
+{
+  digitalWrite(LEDa, LEDON);
+  digitalWrite(LEDb, LEDON);
+  digitalWrite(LEDc, LEDON);
+  digitalWrite(LEDd, LEDON);
+  digitalWrite(LEDe, LEDON);
+  digitalWrite(LEDf, LEDON);
+  digitalWrite(LEDg, LEDOFF);
+  digitalWrite(LEDdb, LEDON);
+}
+  
+void one()
+{
+  digitalWrite(LEDa, LEDOFF);
+  digitalWrite(LEDb, LEDON);
+  digitalWrite(LEDc, LEDON);
+  digitalWrite(LEDd, LEDOFF);
+  digitalWrite(LEDe, LEDOFF);
+  digitalWrite(LEDf, LEDOFF);
+  digitalWrite(LEDg, LEDOFF);
+  digitalWrite(LEDdb, LEDON);
+}
+
+void two()
+{
+  digitalWrite(LEDa, LEDON);
+  digitalWrite(LEDb, LEDON);
+  digitalWrite(LEDc, LEDOFF);
+  digitalWrite(LEDd, LEDON);
+  digitalWrite(LEDe, LEDON);
+  digitalWrite(LEDf, LEDOFF);
+  digitalWrite(LEDg, LEDON);
+  digitalWrite(LEDdb, LEDON);
+}
+
+void three()
+{
+  digitalWrite(LEDa, LEDON);
+  digitalWrite(LEDb, LEDON);
+  digitalWrite(LEDc, LEDON);
+  digitalWrite(LEDd, LEDON);
+  digitalWrite(LEDe, LEDOFF);
+  digitalWrite(LEDf, LEDOFF);
+  digitalWrite(LEDg, LEDON);
+  digitalWrite(LEDdb, LEDON);
+}
+
+void four()
+{
+  digitalWrite(LEDa, LEDOFF);
+  digitalWrite(LEDb, LEDON);
+  digitalWrite(LEDc, LEDON);
+  digitalWrite(LEDd, LEDOFF);
+  digitalWrite(LEDe, LEDOFF);
+  digitalWrite(LEDf, LEDON);
+  digitalWrite(LEDg, LEDON);
+  digitalWrite(LEDdb, LEDON);
+}
+
+void five()
+{
+  digitalWrite(LEDa, LEDON);
+  digitalWrite(LEDb, LEDOFF);
+  digitalWrite(LEDc, LEDON);
+  digitalWrite(LEDd, LEDON);
+  digitalWrite(LEDe, LEDOFF);
+  digitalWrite(LEDf, LEDON);
+  digitalWrite(LEDg, LEDON);
+  digitalWrite(LEDdb, LEDON);
+}
+
+void six()
+{
+  digitalWrite(LEDa, LEDON);
+  digitalWrite(LEDb, LEDOFF);
+  digitalWrite(LEDc, LEDON);
+  digitalWrite(LEDd, LEDON);
+  digitalWrite(LEDe, LEDON);
+  digitalWrite(LEDf, LEDON);
+  digitalWrite(LEDg, LEDON);
+  digitalWrite(LEDdb, LEDON);
+}
+
+void seven()
+{
+  digitalWrite(LEDa, LEDON);
+  digitalWrite(LEDb, LEDON);
+  digitalWrite(LEDc, LEDON);
+  digitalWrite(LEDd, LEDOFF);
+  digitalWrite(LEDe, LEDOFF);
+  digitalWrite(LEDf, LEDOFF);
+  digitalWrite(LEDg, LEDOFF);
+  digitalWrite(LEDdb, LEDON);
+}  
+
+void eight()
+{
+  digitalWrite(LEDa, LEDON);
+  digitalWrite(LEDb, LEDON);
+  digitalWrite(LEDc, LEDON);
+  digitalWrite(LEDd, LEDON);
+  digitalWrite(LEDe, LEDON);
+  digitalWrite(LEDf, LEDON);
+  digitalWrite(LEDg, LEDON);
+  digitalWrite(LEDdb, LEDON);
+}  
+
+void nine()
+{
+  digitalWrite(LEDa, LEDON);
+  digitalWrite(LEDb, LEDON);
+  digitalWrite(LEDc, LEDON);
+  digitalWrite(LEDd, LEDOFF);
+  digitalWrite(LEDe, LEDOFF);
+  digitalWrite(LEDf, LEDON);
+  digitalWrite(LEDg, LEDON);
+  digitalWrite(LEDdb, LEDON);
+}  
+
+void showNum(int number){
+  switch(number){
+    case 0:zero();
+    break;
+    case 1:one();
+    break;
+    case 2:two();
+    break;
+    case 3:three();
+    break;
+    case 4:four();
+    break;
+    case 5:five();
+    break;
+    case 6:six();
+    break;
+    case 7:seven();
+    break;
+    case 8:eight();
+    break;
+    case 9:nine();
+    break;
+  }
+}  
+
+void loop()
+{
+ showNum(0);
+  delay(viive);
+ showNum(1);
+  delay(viive);
+ showNum(2);
+  delay(viive);
+ showNum(3);
+  delay(viive);
+ showNum(4);
+  delay(viive);
+ showNum(5);
+  delay(viive);
+ showNum(6);
+  delay(viive);
+ showNum(7);
+  delay(viive);
+ showNum(8);
+  delay(viive);
+  showNum(9);
+  delay(viive);
+}
